@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/Agence Immo/Création et insertion__AGENCE_IMMO.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Agence Immo/Tri_de_données__AGENCE_IMMO.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Entreprise/Creation et Insertion__Entreprise.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Entreprise/Tri de données__Entreprise.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Vin/Creation et Insertion__VIN.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Vin/Tri de données__VIN.sql" dialect="MySQL" />
+  </component>
+</project>
