@@ -6,6 +6,8 @@ SELECT COUNT(*) AS `Nombre de Clients` FROM Client;
 
 SELECT MAX(prix) AS `Maximum_des_prix_des_apparts` FROM Appartement;
 
+-- f)
+
 SELECT MIN(prix) AS `Minimum_des_pris_des_Apparts` FROM Appartement;
 
 SELECT * FROM Client ORDER BY prenomclt;
