@@ -29,3 +29,18 @@ ON Client.codeclt = Appartement.Appartement_codeclt
 WHERE Appartement.prix = (SELECT MIN(prix) FROM Appartement);
 
                 /* Arrêt à m. */
+
+select client.*
+from client join appartement
+on client.codeclt = appartement.Appartement_codeclt
+where appartement.superficie >= ( select AVG(superficie) from appartement) and appartement.Appartement_coderep = 'R1';
+
+select client.*
+from client join appartement
+on client.codeclt = appartement.Appartement_codeclt
+where appartement.appartement_coderep is not null;
+
+select appartement.*,appartement.Appartement_coderep
+from appartement  join client
+on appartement.Appartement_codeclt = client.codeclt
+where Appartement_coderep = Appartement_coderep;
