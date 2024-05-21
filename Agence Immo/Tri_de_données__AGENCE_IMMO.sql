@@ -12,18 +12,23 @@ SELECT MIN(prix) AS `Minimum_des_pris_des_Apparts` FROM Appartement;
 
 SELECT * FROM Client ORDER BY prenomclt;
 
-SELECT * FROM Appartement JOIN Representant
+SELECT * FROM Appartement
+JOIN Representant
 ON Appartement.Appartement_coderep = Representant.Coderep
-WHERE Representant.nomrep = "Sfaxi" AND Representant.prenomrep = "hedi";
-
-SELECT AVG(superficie) AS `Moyenne_des_Prix_par_Superficie`
-FROM Appartement;
+JOIN Client
+ON appartement.Appartement_codeclt = client.codeclt
+WHERE Representant.nomrep = "Sfaxi" AND Representant.prenomrep = "hedi" AND client.villeclt = "France";
+-- i)
+SELECT AVG(prix) AS `Moyenne_des_Prix_par_Superficie`, superficie
+FROM Appartement
+GROUP BY superficie;
 
 SELECT COUNT(*) AS `Nombre_Apparts_superficie_>_700`
 FROM Appartement WHERE superficie > 700;
 
-SELECT COUNT(*) AS `Nombre_Apparts_where_Prix_Compris_entre_50_et_160`
-FROM Appartement WHERE Prix BETWEEN 50 AND 160;
+SELECT appartement.*
+FROM Appartement
+WHERE Prix BETWEEN 50 AND 160;
 
 SELECT nomclt, prenomclt
 FROM Client JOIN Appartement
